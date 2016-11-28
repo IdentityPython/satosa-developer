@@ -1,0 +1,64 @@
+version: '2'
+
+services:
+  nginx:
+    image: docker.sunet.se/eduid/nginx
+    container_name: front.satosa.docker
+    ports:
+      - "443:443"
+    networks:
+      dev:
+    volumes:
+      - ../nginx/etc/satosa.conf:/etc/nginx/sites-enabled/default:ro
+      - ../nginx/ssl/nginx.crt:/etc/nginx/ssl/nginx.crt:ro
+      - ../nginx/ssl/nginx.key:/etc/nginx/ssl/nginx.key:ro
+    depends_on:
+      - satosa
+
+  satosa:
+    container_name: satosa
+    image: docker.sunet.se/sunet/docker-satosa
+    expose:
+     - 10000
+    networks:
+      dev:
+    volumes:
+      - ../satosa/etc:/opt/satosa/etc
+    environment:
+      - "DATA_DIR=/opt/satosa/etc"
+      - "PROXY_PORT=10000"
+
+  idp:
+    container_name: idp.satosa.docker
+    image: docker.sunet.se/sunet/docker-pysaml2-idp
+    expose:
+      - 8080
+    networks:
+      dev:
+    volumes:
+      - ../pysaml2-idp/etc/:/opt/pysaml2-idp/etc/
+      - ../pysaml2-sp/etc/sp.xml:/opt/pysaml2-idp/etc/sp.xml:ro
+    environment:
+      - "DATA_DIR=/opt/pysaml2-idp/etc/"
+
+  sp:
+    container_name: sp.satosa.docker
+    image: docker.sunet.se/sunet/docker-pysaml2-sp
+    expose:
+      - 8080
+    networks:
+      dev:
+    volumes:
+      - ../pysaml2-sp/etc/:/opt/pysaml2-sp/etc/
+      - ../pysaml2-idp/etc/idp.xml:/opt/pysaml2-sp/etc/idp.xml:ro
+    environment:
+      - "DATA_DIR=/opt/pysaml2-sp/etc/"
+
+networks:
+  dev:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      - subnet: 172.16.25.0/24
+        gateway: 172.16.25.1
