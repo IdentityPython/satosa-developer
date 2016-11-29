@@ -1,0 +1,17 @@
+attributes:
+  address:
+    saml: [postaladdress]
+  displayname:
+    saml: [displayName]
+  edupersontargetedid:
+    saml: [eduPersonTargetedID]
+  givenname:
+    saml: [givenName]
+  mail:
+    saml: [email, emailAdress, mail]
+  name:
+    saml: [cn]
+  surname:
+    saml: [sn, surname]
+  organisation:
+    saml: [ou]

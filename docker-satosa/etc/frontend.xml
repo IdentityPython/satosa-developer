@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<ns0:EntitiesDescriptor xmlns:ns0="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ns1="http://www.w3.org/2000/09/xmldsig#" ID="id-8W2hzIBoQRkZCDHbE"><ns1:Signature Id="Signature1"><ns1:SignedInfo><ns1:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ns1:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><ns1:Reference URI="#id-8W2hzIBoQRkZCDHbE"><ns1:Transforms><ns1:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ns1:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ns1:Transforms><ns1:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ns1:DigestValue>dGgIvye/cZz+kiEIvUwOyXx9qc0=</ns1:DigestValue></ns1:Reference></ns1:SignedInfo><ns1:SignatureValue>dD6BFfZHYBD7I81OAJab0Vcd8szG1x/qPwG8QXdYXX8nVBoy/ivvnQj/xesOFqmh
+J6QomdGPyiJQUwtkSwe5GRPij8D3ufP0vf+wbIXTqSAbyke1+D7gAEU3fl5F9tje
+FYwsik3lHWHUCYfNeujcsuKvRDs8RHYCYOE3NReYKXD+2QcmN9wd6k9q9wWica0A
+VX20zlEXTFkqmtCHKLDMr7zXRD6xXRx3jlKUvpdibejjuhl18aCoXIUiK/PGeCZc
+gHRdO4ked+OXEgBA3n7wvCIZO6MumuXTGHvqryKQID6roxPuqoDEsFCFBUgTRJKk
+6w21/HfXl0pe/nJmLO5HlQ==</ns1:SignatureValue><ns1:KeyInfo><ns1:X509Data><ns1:X509Certificate>MIIEBjCCAu6gAwIBAgIJANwxpCjfD5fLMA0GCSqGSIb3DQEBBQUAMF8xCzAJBgNVBAYTAkFVMRMwEQYDVQQIEwpTb21lLVN0YXRlMSEwHwYDVQQKExhJbnRlcm5ldCBXaWRnaXRzIFB0eSBMdGQxGDAWBgNVBAMTD2xva2kuaXRzLnVtdS5zZTAeFw0xNTEyMTAxNDMzNTlaFw0yNTEyMDcxNDMzNTlaMF8xCzAJBgNVBAYTAkFVMRMwEQYDVQQIEwpTb21lLVN0YXRlMSEwHwYDVQQKExhJbnRlcm5ldCBXaWRnaXRzIFB0eSBMdGQxGDAWBgNVBAMTD2xva2kuaXRzLnVtdS5zZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOCyQM982ZWJRI6SJ5nPCX2TZATHJfpsWHzXRQpt/vrtmYkvaWKLBqSzNhJkiPRrZl4xtJQXtDfUH8ZOnQU0T4IivOuvlP4pytlTYzE1WjSPZY6UJCw5MfGnZ+l5vdYv4XiR2dS+L3IYfQeX+pAh61LHXayxMdfNdXRfV+/pnp93qhW5ZjMnK076hicbfg4XCXk3Lw7PoJPNWWgcKCwddHMHFSpIhBgp5LtNiooT5hfHypbTSHaQapVlScuzXlMAkeH9srhEO0BDT1Rq0dScMuttF1eY/h+T1N9Vha1dVu1WgynfboaC8BUBLM0KoxcguRuGD2/ruFaOCWCMXAv54DcCAwEAAaOBxDCBwTAdBgNVHQ4EFgQUas56pDo5FS+9I7xnVXOVp5De8H0wgZEGA1UdIwSBiTCBhoAUas56pDo5FS+9I7xnVXOVp5De8H2hY6RhMF8xCzAJBgNVBAYTAkFVMRMwEQYDVQQIEwpTb21lLVN0YXRlMSEwHwYDVQQKExhJbnRlcm5ldCBXaWRnaXRzIFB0eSBMdGQxGDAWBgNVBAMTD2xva2kuaXRzLnVtdS5zZYIJANwxpCjfD5fLMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAAERtzf3jrf0VnwbGr0iOoJUFcuanAObMG6PM20Y/PBdPi0XBnlHReXHkGnMiY44cdyQByJH/HRTIGPmNEwUPtzvsLcwpxWz6sAogQlXhgI6ZHVaTt3TXBJGBi+cuG4ggRZSvcmJLwJ1EpwWXNVekiIEQbW+mlwARLbM5N7btQRA3DWofbIxJLn4HckD/n5dq5ueniyDqDgc2o1V2/G/zpEg90lIN7gsSOOqsbttMZFvGq3m+t3EKxjpGx+7PhkGMf9zCVrXXztaqDyZjeNa/rpADj+kU6KudZ9eESvdppCBR0EiROm08xZOMdYU6Sc6SJVa/W48bqJsv95pCZM6joU=</ns1:X509Certificate></ns1:X509Data></ns1:KeyInfo></ns1:Signature><ns0:EntityDescriptor entityID="https://front.satosa.docker/Saml2IDP/proxy.xml"><ns0:IDPSSODescriptor WantAuthnRequestsSigned="false" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol"><ns0:KeyDescriptor use="signing"><ns1:KeyInfo><ns1:X509Data><ns1:X509Certificate>MIIEBjCCAu6gAwIBAgIJANwxpCjfD5fLMA0GCSqGSIb3DQEBBQUAMF8xCzAJBgNV
+BAYTAkFVMRMwEQYDVQQIEwpTb21lLVN0YXRlMSEwHwYDVQQKExhJbnRlcm5ldCBX
+aWRnaXRzIFB0eSBMdGQxGDAWBgNVBAMTD2xva2kuaXRzLnVtdS5zZTAeFw0xNTEy
+MTAxNDMzNTlaFw0yNTEyMDcxNDMzNTlaMF8xCzAJBgNVBAYTAkFVMRMwEQYDVQQI
+EwpTb21lLVN0YXRlMSEwHwYDVQQKExhJbnRlcm5ldCBXaWRnaXRzIFB0eSBMdGQx
+GDAWBgNVBAMTD2xva2kuaXRzLnVtdS5zZTCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBAOCyQM982ZWJRI6SJ5nPCX2TZATHJfpsWHzXRQpt/vrtmYkvaWKL
+BqSzNhJkiPRrZl4xtJQXtDfUH8ZOnQU0T4IivOuvlP4pytlTYzE1WjSPZY6UJCw5
+MfGnZ+l5vdYv4XiR2dS+L3IYfQeX+pAh61LHXayxMdfNdXRfV+/pnp93qhW5ZjMn
+K076hicbfg4XCXk3Lw7PoJPNWWgcKCwddHMHFSpIhBgp5LtNiooT5hfHypbTSHaQ
+apVlScuzXlMAkeH9srhEO0BDT1Rq0dScMuttF1eY/h+T1N9Vha1dVu1WgynfboaC
+8BUBLM0KoxcguRuGD2/ruFaOCWCMXAv54DcCAwEAAaOBxDCBwTAdBgNVHQ4EFgQU
+as56pDo5FS+9I7xnVXOVp5De8H0wgZEGA1UdIwSBiTCBhoAUas56pDo5FS+9I7xn
+VXOVp5De8H2hY6RhMF8xCzAJBgNVBAYTAkFVMRMwEQYDVQQIEwpTb21lLVN0YXRl
+MSEwHwYDVQQKExhJbnRlcm5ldCBXaWRnaXRzIFB0eSBMdGQxGDAWBgNVBAMTD2xv
+a2kuaXRzLnVtdS5zZYIJANwxpCjfD5fLMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcN
+AQEFBQADggEBAAERtzf3jrf0VnwbGr0iOoJUFcuanAObMG6PM20Y/PBdPi0XBnlH
+ReXHkGnMiY44cdyQByJH/HRTIGPmNEwUPtzvsLcwpxWz6sAogQlXhgI6ZHVaTt3T
+XBJGBi+cuG4ggRZSvcmJLwJ1EpwWXNVekiIEQbW+mlwARLbM5N7btQRA3DWofbIx
+JLn4HckD/n5dq5ueniyDqDgc2o1V2/G/zpEg90lIN7gsSOOqsbttMZFvGq3m+t3E
+KxjpGx+7PhkGMf9zCVrXXztaqDyZjeNa/rpADj+kU6KudZ9eESvdppCBR0EiROm0
+8xZOMdYU6Sc6SJVa/W48bqJsv95pCZM6joU=
+</ns1:X509Certificate></ns1:X509Data></ns1:KeyInfo></ns0:KeyDescriptor><ns0:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</ns0:NameIDFormat><ns0:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</ns0:NameIDFormat><ns0:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://front.satosa.docker/Saml2/sso/redirect"/><ns0:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://front.satosa.docker/Saml2/sso/post"/></ns0:IDPSSODescriptor><ns0:Organization><ns0:OrganizationName xml:lang="en">Example Identities Org.</ns0:OrganizationName><ns0:OrganizationDisplayName xml:lang="en">Example Identities</ns0:OrganizationDisplayName><ns0:OrganizationURL xml:lang="en">http://www.example.com</ns0:OrganizationURL></ns0:Organization><ns0:ContactPerson contactType="technical"><ns0:GivenName>Technical</ns0:GivenName><ns0:EmailAddress>technical@example.com</ns0:EmailAddress></ns0:ContactPerson><ns0:ContactPerson contactType="support"><ns0:GivenName>Support</ns0:GivenName><ns0:EmailAddress>support@example.com</ns0:EmailAddress></ns0:ContactPerson></ns0:EntityDescriptor></ns0:EntitiesDescriptor>

@@ -23,7 +23,9 @@ services:
     networks:
       dev:
     volumes:
-      - ../satosa/etc:/opt/satosa/etc
+      - ../docker-satosa/etc:/opt/satosa/etc
+      - ../pysaml2-sp/etc/sp.xml:/opt/satosa/etc/sp.xml:ro
+      - ../pysaml2-idp/etc/idp.xml:/opt/satosa/etc/idp.xml:ro
     environment:
       - "DATA_DIR=/opt/satosa/etc"
       - "PROXY_PORT=10000"
@@ -37,7 +39,7 @@ services:
       dev:
     volumes:
       - ../pysaml2-idp/etc/:/opt/pysaml2-idp/etc/
-      - ../pysaml2-sp/etc/sp.xml:/opt/pysaml2-idp/etc/sp.xml:ro
+      - ../docker-satosa/etc/backend.xml:/opt/pysaml2-idp/etc/backend.xml:ro
     environment:
       - "DATA_DIR=/opt/pysaml2-idp/etc/"
 
@@ -50,7 +52,7 @@ services:
       dev:
     volumes:
       - ../pysaml2-sp/etc/:/opt/pysaml2-sp/etc/
-      - ../pysaml2-idp/etc/idp.xml:/opt/pysaml2-sp/etc/idp.xml:ro
+      - ../docker-satosa/etc/frontend.xml:/opt/pysaml2-sp/etc/frontend.xml:ro
     environment:
       - "DATA_DIR=/opt/pysaml2-sp/etc/"
 

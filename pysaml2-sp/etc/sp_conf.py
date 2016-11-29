@@ -39,6 +39,6 @@ CONFIG = {
     "key_file": "pki/mykey.pem",
     "cert_file": "pki/mycert.pem",
     "xmlsec_binary": xmlsec_path,
-    "metadata": {"local": ["idp.xml"]},
+    "metadata": {"local": ["frontend.xml"]},
     "name_form": NAME_FORMAT_URI,
 }

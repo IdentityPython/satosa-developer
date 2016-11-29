@@ -114,7 +114,7 @@ CONFIG = {
     "key_file": full_path("pki/mykey.pem"),
     "cert_file": full_path("pki/mycert.pem"),
     "metadata": {
-        "local": [full_path("sp.xml")],
+        "local": ["backend.xml"],
     },
     "organization": {
         "display_name": "Rolands Identiteter",
