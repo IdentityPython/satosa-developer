@@ -11,17 +11,20 @@ fi
 ( printf "127.0.0.1\tfront.satosa.docker\n";
   printf "127.0.0.1\tsp.satosa.docker\n";
   printf "127.0.0.1\tidp.satosa.docker\n";
+  printf "127.0.0.1\tpyop.satosa.docker\n";
 ) \
     | while read line; do
     if ! grep -q "^${line}$" /etc/hosts; then
-	echo "$0: Adding line '${line}' to /etc/hosts"
-	if [ "x`whoami`" = "xroot" ]; then
-	    echo "${line}" >> /etc/hosts
-	else
-	    echo "${line}" | sudo tee -a /etc/hosts
-	fi
+        echo "$0: Adding line '${line}' to /etc/hosts"
+
+        if [ "x`whoami`" = "xroot" ]; then
+            echo "${line}" >> /etc/hosts
+        else
+            echo "${line}" | sudo tee -a /etc/hosts
+        fi
+
     else
-	echo "Line '${line}' already in /etc/hosts"
+        echo "Line '${line}' already in /etc/hosts"
     fi
 done
 

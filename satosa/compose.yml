@@ -56,6 +56,17 @@ services:
     environment:
       - "DATA_DIR=/opt/pysaml2-sp/etc/"
 
+  pyop:
+    container_name: pyop.satosa.docker
+    image: docker.sunet.se/sunet/pyop
+    expose:
+      - 9090
+    networks:
+      dev:
+    volumes:
+      - ../pyop/application.cfg:/opt/pyop/src/example/application.cfg:ro
+      - ../pyop/start.sh:/start.sh:ro
+
 networks:
   dev:
     driver: bridge
