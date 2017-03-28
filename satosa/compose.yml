@@ -4,10 +4,11 @@ services:
   nginx:
     image: docker.sunet.se/eduid/nginx
     container_name: front.satosa.docker
-    ports:
-      - "443:443"
+    expose:
+      - 443
     networks:
       dev:
+        ipv4_address: 172.16.25.100
     volumes:
       - ../nginx/etc/satosa.conf:/etc/nginx/sites-enabled/default:ro
       - ../nginx/ssl/nginx.crt:/etc/nginx/ssl/nginx.crt:ro
@@ -16,12 +17,13 @@ services:
       - satosa
 
   satosa:
-    container_name: satosa
+    container_name: satosa.satosa.docker
     image: docker.sunet.se/sunet/docker-satosa
     expose:
      - 10000
     networks:
       dev:
+        ipv4_address: 172.16.25.101
     volumes:
       - ../docker-satosa/etc:/opt/satosa/etc
       - ../pysaml2-sp/etc/sp.xml:/opt/satosa/etc/sp.xml:ro
@@ -29,6 +31,8 @@ services:
     environment:
       - "DATA_DIR=/opt/satosa/etc"
       - "PROXY_PORT=10000"
+    depends_on:
+      - pyop
 
   idp:
     container_name: idp.satosa.docker
@@ -37,6 +41,8 @@ services:
       - 8080
     networks:
       dev:
+        ipv4_address: 172.16.25.102
+    volumes:
     volumes:
       - ../pysaml2-idp/etc/:/opt/pysaml2-idp/etc/
       - ../docker-satosa/etc/backend.xml:/opt/pysaml2-idp/etc/backend.xml:ro
@@ -50,6 +56,7 @@ services:
       - 8080
     networks:
       dev:
+        ipv4_address: 172.16.25.103
     volumes:
       - ../pysaml2-sp/etc/:/opt/pysaml2-sp/etc/
       - ../docker-satosa/etc/frontend.xml:/opt/pysaml2-sp/etc/frontend.xml:ro
@@ -63,6 +70,7 @@ services:
       - 9090
     networks:
       dev:
+        ipv4_address: 172.16.25.104
     volumes:
       - ../pyop/application.cfg:/opt/pyop/src/example/application.cfg:ro
       - ../pyop/start.sh:/start.sh:ro

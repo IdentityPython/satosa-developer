@@ -8,10 +8,11 @@ fi
 #
 # Set up entrys in /etc/hosts for the containers with externally accessible services
 #
-( printf "127.0.0.1\tfront.satosa.docker\n";
-  printf "127.0.0.1\tsp.satosa.docker\n";
-  printf "127.0.0.1\tidp.satosa.docker\n";
-  printf "127.0.0.1\tpyop.satosa.docker\n";
+( printf "172.16.25.100\tfront.satosa.docker\n";
+  printf "172.16.25.101\tsatosa.satosa.docker\n";
+  printf "172.16.25.102\tidp.satosa.docker\n";
+  printf "172.16.25.103\tsp.satosa.docker\n";
+  printf "172.16.25.104\tpyop.satosa.docker\n";
 ) \
     | while read line; do
     if ! grep -q "^${line}$" /etc/hosts; then

@@ -5,6 +5,7 @@ COOKIE_STATE_NAME: "SATOSA_STATE"
 STATE_ENCRYPTION_KEY: "dev encryption key"
 BACKEND_MODULES:
   - "plugins/saml2_backend.yaml"
+  - "plugins/openid_backend.yaml"
 FRONTEND_MODULES:
   - "plugins/saml2_frontend.yaml"
 USER_ID_HASH_SALT: "user id hash salt"
