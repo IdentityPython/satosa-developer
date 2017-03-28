@@ -11,8 +11,8 @@ services:
         ipv4_address: 172.16.25.100
     volumes:
       - ../nginx/etc/satosa.conf:/etc/nginx/sites-enabled/default:ro
-      - ../nginx/ssl/nginx.crt:/etc/nginx/ssl/nginx.crt:ro
-      - ../nginx/ssl/nginx.key:/etc/nginx/ssl/nginx.key:ro
+      - ../nginx/ssl/front.satosa.docker.crt:/etc/nginx/ssl/front.satosa.docker.crt:ro
+      - ../nginx/ssl/front.satosa.docker.key:/etc/nginx/ssl/front.satosa.docker.key:ro
     depends_on:
       - satosa
 
