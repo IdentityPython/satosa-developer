@@ -13,7 +13,7 @@ config:
       application_type: web
       contacts: [ops@example.com]
       redirect_uris: [<base_url>/<name>]
-      subject_type: public
+      subject_type: pairwise
   entity_info:
     contact_person:
       - contact_type: "technical"
