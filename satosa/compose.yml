@@ -29,6 +29,9 @@ services:
       - ../pysaml2-sp/etc/sp.xml:/opt/satosa/etc/sp.xml:ro
       - ../pysaml2-idp/etc/idp.xml:/opt/satosa/etc/idp.xml:ro
     environment:
+      # http://click.pocoo.org/5/python3/
+      - "LC_ALL=C.UTF-8"
+      - "LANG=C.UTF-8"
       - "DATA_DIR=/opt/satosa/etc"
       - "PROXY_PORT=10000"
     depends_on:

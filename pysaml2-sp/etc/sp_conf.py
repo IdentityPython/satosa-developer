@@ -15,7 +15,15 @@ else:
     xmlsec_path = '/usr/local/bin/xmlsec1'
 
 # Make sure the same port number appear in service_conf.py
-BASE = "https://sp.satosa.docker"
+HOST = "sp.satosa.docker"
+PORT = 8080
+
+HTTPS = True
+
+if HTTPS:
+    BASE = "https://%s" % HOST
+else:
+    BASE = "http://%s:%s" % (HOST, PORT)
 
 CONFIG = {
     "entityid": "%s/%ssp.xml" % (BASE, ""),

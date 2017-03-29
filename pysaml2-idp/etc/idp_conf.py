@@ -27,7 +27,7 @@ def full_path(local_file):
     return os.path.join(BASEDIR, local_file)
 
 HOST = 'idp.satosa.docker'
-PORT = 8080
+PORT = 443
 
 HTTPS = True
 

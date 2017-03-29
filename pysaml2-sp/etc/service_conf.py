@@ -2,8 +2,8 @@ from saml2.assertion import Policy
 import saml2.xmldsig as ds
 
 HOST = 'sp.satosa.docker'
-PORT = 8080
-HTTPS = False
+PORT = 443
+HTTPS = True
 SIGN_ALG = None
 DIGEST_ALG = None
 #SIGN_ALG = ds.SIG_RSA_SHA512
