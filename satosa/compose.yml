@@ -18,7 +18,7 @@ services:
 
   satosa:
     container_name: satosa.satosa.docker
-    image: docker.sunet.se/sunet/docker-satosa
+    image: satosa/satosa:latest
     expose:
      - 10000
     networks:
@@ -28,6 +28,7 @@ services:
       - ../docker-satosa/etc:/opt/satosa/etc
       - ../pysaml2-sp/etc/sp.xml:/opt/satosa/etc/sp.xml:ro
       - ../pysaml2-idp/etc/idp.xml:/opt/satosa/etc/idp.xml:ro
+      - ../nginx/ssl/rootCA.pem:/etc/ssl/rootCA.pem:ro
       # source volumes
       - ../sources/satosa:/sources/satosa:ro
     environment:
@@ -37,6 +38,7 @@ services:
       - "DATA_DIR=/opt/satosa/etc"
       - "PROXY_PORT=10000"
       - "PYTHONPATH=/sources/satosa/src"
+      - "REQUESTS_CA_BUNDLE=/etc/ssl/rootCA.pem"
     depends_on:
       - pyop
 

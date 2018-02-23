@@ -13,7 +13,9 @@ config:
     entityid: <base_url>/<name>/proxy_saml2_backend.xml
     service:
       sp:
+        name_id_format: ''
         allow_unsolicited: true
+        want_response_signed: false
         endpoints:
           assertion_consumer_service:
           - [<base_url>/<name>/acs/post, 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST']
