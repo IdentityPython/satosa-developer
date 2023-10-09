@@ -51,7 +51,6 @@ services:
       dev:
         ipv4_address: 172.16.25.102
     volumes:
-    volumes:
       - ../pysaml2-idp/etc/:/opt/pysaml2-idp/etc/
       - ../docker-satosa/etc/backend.xml:/opt/pysaml2-idp/etc/backend.xml:ro
     environment:
